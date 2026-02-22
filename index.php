@@ -673,7 +673,7 @@ if (isset($_SESSION['admin_id'])) {
                     </div>
                 </div>
                 <button type="submit" class="btn-submit">
-                    <i class="fas fa-sign-in-alt"></i> Sign In to Dashboard
+                    <i class="fas fa-sign-in-alt"></i> Sign In
                 </button>
             </form>
             <div class="form-divider">or</div>
@@ -683,7 +683,6 @@ if (isset($_SESSION['admin_id'])) {
         </div>
     </div>
 
-    <!-- ─── REGISTER MODAL ─── -->
     <div class="modal-overlay" id="registerModal">
         <div class="modal-card" style="max-width:500px;">
             <button class="modal-close" onclick="closeModal('register')"><i class="fas fa-times"></i></button>
@@ -701,14 +700,14 @@ if (isset($_SESSION['admin_id'])) {
                         <label class="form-label">First Name</label>
                         <div class="form-input-wrap">
                             <i class="fas fa-user form-icon"></i>
-                            <input type="text" class="form-input" name="first_name" placeholder="Juan" required>
+                            <input type="text" class="form-input" name="first_name" placeholder=" " required>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="form-label">Last Name</label>
                         <div class="form-input-wrap">
                             <i class="fas fa-user form-icon"></i>
-                            <input type="text" class="form-input" name="last_name" placeholder="Dela Cruz" required>
+                            <input type="text" class="form-input" name="last_name" placeholder=" " required>
                         </div>
                     </div>
                 </div>
@@ -793,7 +792,6 @@ if (isset($_SESSION['admin_id'])) {
             document.getElementById(modal+'Alert').innerHTML = `<div class="alert alert-${type}"><i class="fas fa-${type==='error'?'circle-exclamation':'circle-check'}"></i>${msg}</div>`;
         }
 
-        // Animate feature cards on scroll
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) { entry.target.style.opacity='1'; entry.target.style.transform='translateY(0)'; }
